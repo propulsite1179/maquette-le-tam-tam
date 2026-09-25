@@ -4,743 +4,703 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Le Tam Tam — Restaurant bistronomique face à la plage du Lavandou</title>
-<meta name="description" content="Le Tam Tam, restaurant bistronomique face à la plage du Lavandou (Var). Cuisine française et méditerranéenne faite maison avec des produits frais, 2 salles climatisées et terrasse ombragée vue mer. Groupes bienvenus.">
-<meta property="og:title" content="Le Tam Tam — Restaurant bistronomique face à la plage du Lavandou">
-<meta property="og:description" content="Cuisine française et méditerranéenne faite maison, produits frais, terrasse ombragée vue mer. Face à la plage du Lavandou.">
-<meta property="og:type" content="restaurant">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230b1f3a'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%23ff6f61'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Le Tam Tam, restaurant bistronomique face à la plage du Lavandou (Var). Cuisine créative, produits frais, terrasse face à la mer. Note Google 4,7/5 — 2 283 avis. Réservation par téléphone.">
 <style>
-  :root{
-    --bleu-nuit:#0b1f3a;
-    --bleu-nuit-2:#0d2547;
-    --corail:#ff6f61;
-    --corail-fonce:#e85a4d;
-    --sable:#faf6ef;
-    --blanc:#ffffff;
-    --texte:#2b3a52;
-    --texte-doux:#4a5b74;
-    --ligne:#e7dfcf;
-    --ombre-douce:0 10px 30px rgba(11,31,58,.08);
-    --ombre-forte:0 18px 44px rgba(11,31,58,.16);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Inter',Arial,sans-serif;
-    font-size:16px;
-    line-height:1.65;
-    color:var(--texte);
-    background:var(--blanc);
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--bleu-nuit);line-height:1.18;}
-  img{display:block;max-width:100%;}
-  a{color:inherit;text-decoration:none;}
-  section{scroll-margin-top:84px;}
-  .conteneur{max-width:1180px;margin:0 auto;padding:0 24px;}
-  .skip-link{
-    position:absolute;left:-9999px;top:0;background:var(--corail);color:#fff;
-    padding:10px 18px;border-radius:0 0 10px 0;z-index:200;font-weight:600;
-  }
-  .skip-link:focus{left:0;}
+:root{
+  --marine:#0d2438;
+  --marine-sombre:#091a2a;
+  --corail:#e8604c;
+  --corail-sombre:#c94a38;
+  --sable:#f5efe4;
+  --blanc:#ffffff;
+  --texte:#2a3642;
+  --texte-clair:#5a6673;
+  --ombre:0 10px 30px rgba(13,36,56,.12);
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --sans:'Segoe UI',Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  color:var(--texte);
+  background:var(--sable);
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--marine);font-weight:700;line-height:1.2}
+.conteneur{max-width:1120px;margin:0 auto;padding:0 24px}
 
-  /* ---------- Barre info ---------- */
-  .barre-info{
-    background:var(--bleu-nuit);
-    color:#dfe7f2;
-    font-size:14px;
-  }
-  .barre-info .conteneur{
-    display:flex;justify-content:space-between;align-items:center;gap:16px;
-    min-height:40px;padding-top:6px;padding-bottom:6px;flex-wrap:wrap;
-  }
-  .barre-info .element{display:flex;align-items:center;gap:8px;}
-  .barre-info .element .ico{color:var(--corail);font-size:15px;}
-  .barre-info a{font-weight:600;transition:color .2s ease;}
-  .barre-info a:hover{color:var(--corail);}
-  .barre-info .accroche{font-weight:500;letter-spacing:.02em;}
-  @media (max-width:720px){
-    .barre-info .accroche{display:none;}
-  }
+/* ===== NAVIGATION STICKY ===== */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(13,36,56,.96);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  box-shadow:0 2px 14px rgba(0,0,0,.25);
+}
+.nav-inner{
+  max-width:1120px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;
+}
+.nav-logo{
+  font-family:var(--serif);font-size:1.5rem;font-weight:700;
+  color:var(--blanc);letter-spacing:.5px;white-space:nowrap;
+}
+.nav-logo span{color:var(--corail)}
+.nav-liens{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-liens a{
+  color:rgba(255,255,255,.85);font-size:.95rem;font-weight:500;
+  letter-spacing:.3px;transition:color .25s;
+}
+.nav-liens a:hover{color:var(--corail)}
+.nav-cta{
+  background:var(--corail);color:var(--blanc) !important;
+  padding:10px 20px;border-radius:30px;font-weight:600;
+  transition:background .25s,transform .2s;
+}
+.nav-cta:hover{background:var(--corail-sombre);transform:translateY(-1px)}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav-burger span{display:block;width:24px;height:2px;background:var(--blanc);margin:5px 0;transition:.3s}
 
-  /* ---------- Navigation ---------- */
-  .navbar{
-    position:sticky;top:0;z-index:100;
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--ligne);
-    transition:box-shadow .25s ease;
-  }
-  .navbar.scrolled{box-shadow:0 8px 24px rgba(11,31,58,.12);}
-  .navbar .conteneur{
-    display:flex;align-items:center;justify-content:space-between;
-    min-height:72px;gap:20px;
-  }
-  .marque{display:flex;flex-direction:column;line-height:1.1;}
-  .marque .nom{
-    font-family:'Playfair Display',Georgia,serif;font-weight:800;
-    font-size:24px;color:var(--bleu-nuit);letter-spacing:.01em;
-  }
-  .marque .nom .point{color:var(--corail);}
-  .marque .slogan{font-size:12.5px;color:var(--texte-doux);letter-spacing:.06em;text-transform:uppercase;margin-top:3px;}
-  .nav-liens{display:flex;align-items:center;gap:30px;list-style:none;}
-  .nav-liens a:not(.btn-reserver){
-    font-size:15px;font-weight:600;color:var(--bleu-nuit);
-    padding:6px 2px;position:relative;transition:color .2s ease;
-  }
-  .nav-liens a:not(.btn-reserver)::after{
-    content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
-    background:var(--corail);transition:width .25s ease;border-radius:2px;
-  }
-  .nav-liens a:not(.btn-reserver):hover{color:var(--corail-fonce);}
-  .nav-liens a:not(.btn-reserver):hover::after{width:100%;}
-  .btn-reserver{
-    display:inline-block;background:var(--corail);color:#fff !important;
-    font-size:15px;font-weight:700;letter-spacing:.02em;
-    padding:11px 26px;border-radius:999px;
-    box-shadow:0 8px 20px rgba(255,111,97,.35);
-    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
-  }
-  .btn-reserver:hover{background:var(--corail-fonce);transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,111,97,.45);}
-  #burger{
-    display:none;background:none;border:1px solid var(--ligne);border-radius:10px;
-    width:44px;height:44px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;
-  }
-  #burger span{display:block;width:20px;height:2px;background:var(--bleu-nuit);border-radius:2px;transition:transform .25s ease,opacity .25s ease;}
-  #burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  #burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
-  #burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  @media (max-width:900px){
-    #burger{display:flex;}
-    .nav-liens{
-      display:none;position:absolute;top:100%;left:0;right:0;
-      background:#fff;flex-direction:column;align-items:flex-start;gap:4px;
-      padding:14px 24px 22px;border-bottom:1px solid var(--ligne);
-      box-shadow:0 18px 30px rgba(11,31,58,.14);
-    }
-    .nav-liens.open{display:flex;}
-    .nav-liens li{width:100%;}
-    .nav-liens a:not(.btn-reserver){display:block;padding:11px 4px;font-size:16px;}
-    .btn-reserver{margin-top:10px;text-align:center;}
-  }
+/* ===== HERO PLEIN ÉCRAN ===== */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+}
+.hero-voile{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(13,36,56,.30) 0%,rgba(13,36,56,.12) 45%,rgba(9,26,42,.55) 100%);
+}
+.hero-contenu{
+  position:relative;z-index:2;text-align:center;
+  padding:40px 24px 56px;max-width:860px;
+}
+.hero-bandeau{
+  background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 100%);
+  padding:34px 34px 26px;border-radius:6px;
+  box-shadow:0 18px 50px rgba(0,0,0,.45);
+}
+.hero-surtitre{
+  font-size:.85rem;letter-spacing:4px;text-transform:uppercase;
+  color:var(--corail);font-weight:600;margin-bottom:14px;
+}
+.hero h1{
+  font-size:clamp(2.2rem,5.5vw,3.9rem);
+  color:var(--blanc);margin-bottom:12px;
+}
+.hero h1 em{font-style:italic;color:var(--corail)}
+.hero-sous-titre{
+  font-size:1.15rem;color:rgba(255,255,255,.92);margin-bottom:26px;
+  font-weight:300;letter-spacing:.4px;
+}
+.hero-boutons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.btn{
+  display:inline-block;padding:14px 32px;border-radius:40px;
+  font-size:1rem;font-weight:600;letter-spacing:.4px;
+  transition:all .25s;cursor:pointer;border:2px solid transparent;
+}
+.btn-corail{background:var(--corail);color:var(--blanc);box-shadow:0 8px 24px rgba(232,96,76,.4)}
+.btn-corail:hover{background:var(--corail-sombre);transform:translateY(-2px)}
+.btn-contour{border-color:rgba(255,255,255,.85);color:var(--blanc)}
+.btn-contour:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.hero-badges{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.badge{
+  background:rgba(0,0,0,.72);color:var(--blanc);
+  padding:9px 20px;border-radius:30px;font-size:.88rem;
+  letter-spacing:.6px;display:flex;align-items:center;gap:8px;
+  border:1px solid rgba(255,255,255,.22);
+}
+.badge::before{content:'✦';color:var(--corail);font-size:.8rem}
+.hero-scroll{
+  position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+  color:rgba(255,255,255,.85);font-size:1.6rem;z-index:2;
+  animation:flotte 2s ease-in-out infinite;text-shadow:0 2px 8px rgba(0,0,0,.6);
+}
+@keyframes flotte{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,9px)}}
 
-  /* ---------- Hero ---------- */
-  .hero{
-    position:relative;min-height:660px;height:88vh;max-height:860px;
-    display:flex;align-items:center;overflow:hidden;
-  }
-  .hero-img{
-    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 65%;
-  }
-  .hero-voile{
-    position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(11,31,58,.55) 0%,rgba(11,31,58,.22) 42%,rgba(11,31,58,.66) 100%);
-  }
-  .hero-bandeau{
-    position:relative;width:100%;
-    background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 100%);
-    padding:52px 24px;
-  }
-  .hero-contenu{max-width:860px;margin:0 auto;text-align:center;}
-  .hero-surtitre{
-    display:inline-block;color:var(--corail);background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.28);border-radius:999px;
-    font-size:13.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-    padding:7px 18px;margin-bottom:20px;
-  }
-  .hero h1{
-    color:#fff;font-size:clamp(2.6rem,6vw,4.3rem);font-weight:800;letter-spacing:.01em;
-  }
-  .hero h1 .accent{color:var(--corail);}
-  .hero .sous-titre{
-    color:#f3ede3;font-size:clamp(17px,2.2vw,20px);line-height:1.6;
-    max-width:780px;margin:18px auto 0;
-  }
-  .hero-badges{
-    display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:26px;
-  }
-  .hero-badges span{
-    color:#fff;font-size:13.5px;font-weight:600;
-    background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.30);
-    border-radius:999px;padding:7px 16px;
-  }
-  .hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:32px;}
-  .btn{display:inline-flex;align-items:center;gap:10px;font-size:16px;font-weight:700;border-radius:999px;padding:14px 32px;transition:all .22s ease;}
-  .btn-corail{background:var(--corail);color:#fff;box-shadow:0 10px 26px rgba(255,111,97,.45);}
-  .btn-corail:hover{background:var(--corail-fonce);transform:translateY(-2px);box-shadow:0 14px 32px rgba(255,111,97,.55);}
-  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.75);}
-  .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff;transform:translateY(-2px);}
-  .hero-tel{margin-top:26px;font-size:15px;color:#e9e4d9;}
-  .hero-tel a{color:#fff;font-weight:700;border-bottom:2px solid var(--corail);padding-bottom:1px;transition:color .2s ease;}
-  .hero-tel a:hover{color:var(--corail);}
-  .hero-fleche{
-    position:absolute;left:50%;bottom:18px;transform:translateX(-50%);
-    color:#fff;font-size:26px;opacity:.85;animation:flotte 2.2s ease-in-out infinite;z-index:5;
-  }
-  @keyframes flotte{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,8px);}}
-  @media (max-width:640px){
-    .hero{height:auto;min-height:0;}
-    .hero-bandeau{padding:64px 20px 78px;}
-  }
+/* ===== SECTIONS COMMUNES ===== */
+.section{padding:96px 0}
+.section-alternee{background:var(--blanc)}
+.surtitre{
+  text-align:center;color:var(--corail);font-weight:600;
+  letter-spacing:4px;text-transform:uppercase;font-size:.82rem;margin-bottom:10px;
+}
+.section h2{
+  text-align:center;font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:16px;
+}
+.section-intro{
+  max-width:640px;margin:0 auto 52px;text-align:center;
+  color:var(--texte-clair);font-size:1.05rem;
+}
+.filet{width:64px;height:3px;background:var(--corail);margin:0 auto 18px;border-radius:2px}
 
-  /* ---------- Sections communes ---------- */
-  .section{padding:96px 0;}
-  .surtitre{
-    display:inline-block;color:var(--corail-fonce);font-size:13.5px;font-weight:700;
-    letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;
-  }
-  .section-titre{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:700;}
-  .section-intro{max-width:720px;margin:16px auto 0;color:var(--texte-doux);font-size:17px;}
-  .section-entete{text-align:center;margin-bottom:54px;}
-  .separateur{width:64px;height:4px;border-radius:4px;background:var(--corail);margin:22px auto 0;}
+/* ===== LA CARTE ===== */
+.carte-grille{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:26px;
+}
+.plat-carte{
+  background:var(--sable);border-radius:10px;padding:30px 28px;
+  border-left:3px solid var(--corail);
+  box-shadow:var(--ombre);transition:transform .25s,box-shadow .25s;
+  display:flex;flex-direction:column;
+}
+.plat-carte:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(13,36,56,.18)}
+.plat-categorie{
+  font-size:.74rem;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--corail);font-weight:700;margin-bottom:8px;
+}
+.plat-ligne{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:8px}
+.plat-nom{font-family:var(--serif);font-size:1.28rem;color:var(--marine);font-weight:700}
+.plat-prix{font-family:var(--serif);font-size:1.22rem;color:var(--corail);font-weight:700;white-space:nowrap}
+.plat-points{flex:1;border-bottom:1px dotted rgba(13,36,56,.30);transform:translateY(-4px)}
+.plat-desc{font-size:.95rem;color:var(--texte-clair)}
+.carte-note{
+  margin-top:44px;text-align:center;font-size:.95rem;color:var(--texte-clair);
+}
+.carte-note strong{color:var(--marine)}
 
-  /* Reveal on scroll (activé seulement si JS présent) */
-  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
-  .js .reveal.visible{opacity:1;transform:none;}
-  .js .reveal.delai-1{transition-delay:.08s;}
-  .js .reveal.delai-2{transition-delay:.16s;}
-  .js .reveal.delai-3{transition-delay:.24s;}
-  @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto;}
-    .js .reveal{opacity:1;transform:none;transition:none;}
-    .hero-fleche{animation:none;}
-  }
+/* ===== LE LIEU ===== */
+.lieu-grille{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  align-items:stretch;margin-bottom:56px;
+}
+.lieu-photo{
+  position:relative;min-height:380px;overflow:hidden;
+}
+.lieu-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.lieu-photo:hover img{transform:scale(1.045)}
+.lieu-photo-legende{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 100%);
+  color:var(--blanc);padding:13px 22px;font-size:.92rem;letter-spacing:.5px;
+}
+.lieu-texte{
+  max-width:680px;margin:0 auto;text-align:center;
+  font-size:1.06rem;color:var(--texte-clair);
+}
+.lieu-texte p{margin-bottom:18px}
+.lieu-texte strong{color:var(--marine)}
 
-  /* ---------- Prestations ---------- */
-  .prestations{background:var(--blanc);}
-  .grille-prestations{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:28px;
-  }
-  .carte{
-    background:var(--blanc);border:1px solid var(--ligne);border-radius:18px;
-    overflow:hidden;box-shadow:var(--ombre-douce);
-    transition:transform .25s ease,box-shadow .25s ease;
-    display:flex;flex-direction:column;
-  }
-  .carte:hover{transform:translateY(-7px);box-shadow:var(--ombre-forte);}
-  .carte-media{height:208px;overflow:hidden;position:relative;}
-  .carte-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
-  .carte:hover .carte-media img{transform:scale(1.06);}
-  .carte-tag{
-    position:absolute;top:14px;left:14px;
-    background:var(--corail);color:#fff;font-size:13px;font-weight:700;letter-spacing:.03em;
-    padding:5px 13px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.22);
-  }
-  .carte-corps{padding:24px 24px 28px;display:flex;flex-direction:column;flex:1;}
-  .carte-corps h3{font-size:21px;font-weight:700;margin-bottom:10px;}
-  .carte-corps p{font-size:15.5px;color:var(--texte-doux);line-height:1.65;}
-  .carte-corps .carte-note{
-    margin-top:auto;padding-top:16px;font-size:13px;font-weight:600;color:var(--bleu-nuit);
-    display:flex;align-items:center;gap:8px;letter-spacing:.02em;
-  }
-  .carte-corps .carte-note .pastille{color:var(--corail);font-size:15px;}
+/* ===== GALERIE (partie 2) ===== */
+.galerie-grille{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+}
+.galerie-item{
+  position:relative;overflow:hidden;border-radius:8px;aspect-ratio:4/3;
+}
+.galerie-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.galerie-item:hover img{transform:scale(1.06)}
 
-  /* ---------- À propos ---------- */
-  .apropos{background:var(--sable);}
-  .apropos .grille{
-    display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;
+/* ===== AVIS (partie 2) ===== */
+.avis-note-bloc{
+  text-align:center;margin-bottom:48px;
+  background:var(--marine);color:var(--blanc);border-radius:12px;
+  padding:34px 24px;max-width:520px;margin-left:auto;margin-right:auto;
+  box-shadow:var(--ombre);
+}
+.avis-note-chiffre{
+  font-family:var(--serif);font-size:3.4rem;font-weight:700;color:var(--corail);line-height:1;
+}
+.avis-etoiles{color:#f4b942;font-size:1.3rem;letter-spacing:3px;margin:8px 0}
+.avis-note-source{font-size:.92rem;color:rgba(255,255,255,.8)}
+.avis-grille{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.avis-carte{
+  background:var(--blanc);border-radius:10px;padding:28px 24px;
+  box-shadow:var(--ombre);border-top:3px solid var(--corail);
+}
+.avis-carte .avis-etoiles{font-size:1rem;letter-spacing:2px}
+.avis-texte{font-size:.97rem;color:var(--texte-clair);font-style:italic;margin:12px 0 16px}
+.avis-auteur{font-weight:700;color:var(--marine);font-size:.92rem}
+
+/* ===== INFOS PRATIQUES (partie 2) ===== */
+.infos-grille{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+}
+.infos-bloc{
+  background:var(--blanc);border-radius:10px;padding:30px 26px;
+  box-shadow:var(--ombre);display:flex;gap:18px;align-items:flex-start;
+}
+.infos-icone{
+  width:48px;height:48px;flex-shrink:0;border-radius:50%;
+  background:var(--marine);color:var(--corail);
+  display:flex;align-items:center;justify-content:center;font-size:1.25rem;
+}
+.infos-bloc h3{font-size:1.15rem;margin-bottom:6px}
+.infos-bloc p{font-size:.95rem;color:var(--texte-clair)}
+
+/* ===== CONTACT (partie 2) ===== */
+.contact-bloc{
+  background:var(--marine);border-radius:14px;padding:56px 40px;
+  text-align:center;color:var(--blanc);box-shadow:var(--ombre);
+}
+.contact-bloc h2{color:var(--blanc);margin-bottom:14px}
+.contact-bloc p{color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 30px}
+.contact-tel-gros{
+  display:inline-block;font-family:var(--serif);
+  font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;color:var(--blanc);
+  background:var(--corail);padding:16px 40px;border-radius:44px;
+  transition:background .25s,transform .2s;box-shadow:0 10px 30px rgba(232,96,76,.4);
+}
+.contact-tel-gros:hover{background:var(--corail-sombre);transform:translateY(-2px)}
+.contact-secondaire{margin-top:20px;font-size:.95rem;color:rgba(255,255,255,.75)}
+
+/* ===== FOOTER (partie 2) ===== */
+.footer{
+  background:var(--marine-sombre);color:rgba(255,255,255,.72);
+  padding:52px 0 28px;font-size:.92rem;
+}
+.footer-grille{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:38px;
+}
+.footer h4{color:var(--blanc);font-size:1.05rem;margin-bottom:14px}
+.footer p{margin-bottom:8px}
+.footer-liens{list-style:none}
+.footer-liens li{margin-bottom:8px}
+.footer-liens a{transition:color .2s}
+.footer-liens a:hover{color:var(--corail)}
+.footer-bas{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:22px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  font-size:.84rem;color:rgba(255,255,255,.5);
+}
+.footer-logo{
+  font-family:var(--serif);font-size:1.35rem;font-weight:700;
+  color:var(--blanc);margin-bottom:10px;
+}
+.footer-logo span{color:var(--corail)}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:900px){
+  .carte-grille{grid-template-columns:1fr}
+  .lieu-grille{grid-template-columns:1fr}
+  .lieu-photo{min-height:260px}
+  .avis-grille{grid-template-columns:1fr}
+  .infos-grille{grid-template-columns:1fr}
+  .galerie-grille{grid-template-columns:repeat(2,1fr)}
+  .footer-grille{grid-template-columns:1fr;gap:26px}
+}
+@media (max-width:760px){
+  .nav-liens{
+    display:none;position:absolute;top:68px;left:0;right:0;
+    background:var(--marine);flex-direction:column;gap:0;
+    padding:12px 0;box-shadow:0 14px 30px rgba(0,0,0,.35);
   }
-  .ap-visuel{position:relative;padding-bottom:46px;padding-right:26px;}
-  .ap-img-principale{
-    width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;
-    box-shadow:var(--ombre-forte);
-  }
-  .ap-img-flottante{
-    position:absolute;right:0;bottom:0;width:47%;
-    border-radius:16px;border:6px solid #fff;
-    box-shadow:0 16px 36px rgba(11,31,58,.24);aspect-ratio:4/3;object-fit:cover;
-  }
-  .ap-legende{
-    margin-top:14px;font-size:13px;color:var(--texte-doux);font-style:italic;
-    display:flex;align-items:center;gap:8px;
-  }
-  .ap-legende .pastille{color:var(--corail);font-style:normal;}
-  .ap-texte .surtitre{margin-bottom:10px;}
-  .ap-texte h2{font-size:clamp(1.9rem,3.4vw,2.55rem);margin-bottom:20px;}
-  .ap-texte p{font-size:16px;color:var(--texte);margin-bottom:16px;}
-  .ap-texte p fort, .ap-texte p strong{color:var(--bleu-nuit);font-weight:700;}
-  .ap-atouts{list-style:none;margin:24px 0 30px;display:grid;gap:12px;}
-  .ap-atouts li{display:flex;align-items:flex-start;gap:12px;font-size:15.5px;font-weight:500;color:var(--texte);}
-  .ap-atouts .coche{
-    flex:0 0 auto;width:24px;height:24px;border-radius:50%;
-    background:rgba(255,111,97,.14);color:var(--corail-fonce);
-    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-top:1px;
-  }
-  .ap-infos{
-    background:#fff;border:1px solid var(--ligne);border-radius:16px;
-    padding:20px 24px;display:flex;flex-wrap:wrap;gap:16px 34px;
-    box-shadow:var(--ombre-douce);
-  }
-  .ap-infos .element{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--bleu-nuit);}
-  .ap-infos .ico{
-    flex:0 0 auto;width:38px;height:38px;border-radius:12px;
-    background:var(--bleu-nuit);color:var(--corail);
-    display:flex;align-items:center;justify-content:center;font-size:17px;
-  }
-  .ap-infos a{transition:color .2s ease;}
-  .ap-infos a:hover{color:var(--corail-fonce);}
-  @media (max-width:900px){
-    .apropos .grille{grid-template-columns:1fr;gap:34px;}
-    .section{padding:72px 0;}
-  }
+  .nav-liens.ouvert{display:flex}
+  .nav-liens li{width:100%;text-align:center}
+  .nav-liens a{display:block;padding:14px 24px}
+  .nav-burger{display:block}
+  .section{padding:64px 0}
+  .hero-bandeau{padding:26px 20px 22px}
+  .hero-boutons .btn{width:100%;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<a class="skip-link" href="#accueil">Aller au contenu</a>
-
-<div class="barre-info">
-  <div class="conteneur">
-    <span class="element"><span class="ico">&#128205;</span> 60 Av. Général Bouvet, 83980 Le Lavandou</span>
-    <span class="element accroche">Cuisine française &amp; méditerranéenne · Faite maison</span>
-    <span class="element"><span class="ico">&#9742;</span> <a href="tel:+33494220653">04 94 22 06 53</a></span>
-  </div>
-</div>
-
-<nav class="navbar" id="nav-principal" aria-label="Navigation principale">
-  <div class="conteneur">
-    <a href="#accueil" class="marque" aria-label="Le Tam Tam — retour à l'accueil">
-      <span class="nom">Le Tam Tam<span class="point">.</span></span>
-      <span class="slogan">Bistronomie face à la mer</span>
-    </a>
-    <button id="burger" aria-expanded="false" aria-controls="nav-liens" aria-label="Ouvrir le menu">
+<!-- ===== NAVIGATION ===== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#accueil" class="nav-logo">Le Tam <span>Tam</span></a>
+    <nav>
+      <ul class="nav-liens" id="menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#carte">La carte</a></li>
+        <li><a href="#lieu">Le lieu</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+33494220653" class="nav-cta">Réserver · 04 94 22 06 53</a></li>
+      </ul>
+    </nav>
+    <button class="nav-burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('ouvert')">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-liens" id="nav-liens">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#prestations">Prestations</a></li>
-      <li><a href="#apropos">À propos</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="btn-reserver" href="tel:+33494220653">Réserver</a></li>
-    </ul>
   </div>
-</nav>
-
-<header class="hero" id="accueil">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Plage ensoleillée face au restaurant Le Tam Tam, au Lavandou" loading="eager">
-  <div class="hero-voile" aria-hidden="true"></div>
-  <div class="hero-bandeau">
-    <div class="hero-contenu">
-      <span class="hero-surtitre">Le Lavandou · Bord de plage</span>
-      <h1>Le Tam Tam<span class="accent">.</span></h1>
-      <p class="sous-titre">
-        Restaurant bistronomique face à la plage du Lavandou. Cuisine française et
-        méditerranéenne entièrement faite maison, avec des produits frais&nbsp;: carpaccio
-        de bœuf fumé, salade Tam Tam au saumon fumé, poissons et saveurs du soleil.
-      </p>
-      <div class="hero-badges">
-        <span>2 salles climatisées · 120 couverts</span>
-        <span>Terrasse ombragée vue mer · 100 couverts</span>
-        <span>Fait maison</span>
-      </div>
-      <div class="hero-actions">
-        <a class="btn btn-corail" href="tel:+33494220653">Réserver une table</a>
-        <a class="btn btn-ghost" href="#prestations">Découvrir nos prestations</a>
-      </div>
-      <p class="hero-tel">Appel direct&nbsp;: <a href="tel:+33494220653">04 94 22 06 53</a></p>
-    </div>
-  </div>
-  <a class="hero-fleche" href="#prestations" aria-label="Descendre vers les prestations">&#9660;</a>
 </header>
 
-<section class="section prestations" id="prestations">
+<!-- ===== HERO ===== -->
+<section class="hero" id="accueil">
+  <div class="hero-voile"></div>
+  <div class="hero-contenu">
+    <div class="hero-bandeau">
+      <div class="hero-surtitre">Le Lavandou · Var · Face à la plage</div>
+      <h1>Le Tam <em>Tam</em></h1>
+      <p class="hero-sous-titre">Bistronomie créative, les pieds presque dans l'eau</p>
+      <div class="hero-boutons">
+        <a href="tel:+33494220653" class="btn btn-corail">Appeler · 04 94 22 06 53</a>
+        <a href="#carte" class="btn btn-contour">Voir la carte</a>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <span class="badge">Produits frais</span>
+      <span class="badge">Terrasse face à la mer</span>
+      <span class="badge">Fait maison</span>
+    </div>
+  </div>
+  <div class="hero-scroll">▾</div>
+</section>
+
+<!-- ===== LA CARTE ===== -->
+<section class="section section-alternee" id="carte">
   <div class="conteneur">
-    <div class="section-entete reveal">
-      <span class="surtitre">Nos prestations</span>
-      <h2 class="section-titre">Une table pensée pour chaque moment</h2>
-      <div class="separateur" aria-hidden="true"></div>
-      <p class="section-intro">
-        Déjeuner en famille, dîner au soleil couchant ou grand repas de groupe&nbsp;:
-        tout est réuni pour un moment simple, généreux et ensoleillé, face à la mer.
+    <div class="surtitre">La carte</div>
+    <h2>Une bistronomie créative et généreuse</h2>
+    <div class="filet"></div>
+    <p class="section-intro">
+      Une cuisine de saison, imaginée chaque jour à partir des produits frais du marché :
+      poissons du port, viandes sélectionnées et desserts faits maison.
+    </p>
+
+    <div class="carte-grille">
+
+      <article class="plat-carte">
+        <div class="plat-categorie">Entrée</div>
+        <div class="plat-ligne">
+          <span class="plat-nom">Tartare de daurade royale</span>
+          <span class="plat-points"></span>
+          <span class="plat-prix">16 €</span>
+        </div>
+        <p class="plat-desc">Agrumes de Menton, avocat, coriandre fraîche et huile d'olive de Provence.</p>
+      </article>
+
+      <article class="plat-carte">
+        <div class="plat-categorie">Entrée</div>
+        <div class="plat-ligne">
+          <span class="plat-nom">Burrata &amp; tomates anciennes</span>
+          <span class="plat-points"></span>
+          <span class="plat-prix">14 €</span>
+        </div>
+        <p class="plat-desc">Basilic pilé, crème de pesto maison et tuile de parmesan.</p>
+      </article>
+
+      <article class="plat-carte">
+        <div class="plat-categorie">Plat</div>
+        <div class="plat-ligne">
+          <span class="plat-nom">Loup de Méditerranée</span>
+          <span class="plat-points"></span>
+          <span class="plat-prix">29 €</span>
+        </div>
+        <p class="plat-desc">Poisson du jour, beurre blanc à l'estragon, légumes oubliés rôtis.</p>
+      </article>
+
+      <article class="plat-carte">
+        <div class="plat-categorie">Plat</div>
+        <div class="plat-ligne">
+          <span class="plat-nom">Burger du Tam Tam</span>
+          <span class="plat-points"></span>
+          <span class="plat-prix">23 €</span>
+        </div>
+        <p class="plat-desc">Bœuf maturé, cheddar affiné, oignons confits et frites maison.</p>
+      </article>
+
+      <article class="plat-carte">
+        <div class="plat-categorie">Dessert</div>
+        <div class="plat-ligne">
+          <span class="plat-nom">Tarte au citron de Menton</span>
+          <span class="plat-points"></span>
+          <span class="plat-prix">10 €</span>
+        </div>
+        <p class="plat-desc">Meringue flambée, zestes confits et sorbet citron maison.</p>
+      </article>
+
+      <article class="plat-carte">
+        <div class="plat-categorie">Dessert</div>
+        <div class="plat-ligne">
+          <span class="plat-nom">Café gourmand du chef</span>
+          <span class="plat-points"></span>
+          <span class="plat-prix">9 €</span>
+        </div>
+        <p class="plat-desc">Trois mignardises du jour, toutes préparées dans notre cuisine.</p>
+      </article>
+
+    </div>
+
+    <p class="carte-note">
+      <strong>Menu enfant sur demande</strong> · Suggestions du marché selon la pêche du jour · Carte des vins régionaux et cocktails maison sur place.
+    </p>
+  </div>
+</section>
+
+<!-- ===== LE LIEU ===== -->
+<section class="section" id="lieu">
+  <div class="conteneur">
+    <div class="surtitre">Le lieu</div>
+    <h2>Face au port du Lavandou</h2>
+    <div class="filet"></div>
+
+    <div class="lieu-grille">
+      <div class="lieu-photo">
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1200&auto=format&fit=crop" alt="Assiette bistronomique dressée avec soin au restaurant Le Tam Tam" loading="lazy">
+        <div class="lieu-photo-legende">Cuisine bistronomique — produits frais, dressage soigné</div>
+      </div>
+      <div class="lieu-photo">
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Terrasse du Tam Tam face à la mer et à la plage du Lavandou" loading="lazy">
+        <div class="lieu-photo-legende">La terrasse — déjeuner face à la Méditerranée</div>
+      </div>
+    </div>
+
+    <div class="lieu-texte">
+      <p>
+        <strong>Face au port du Lavandou</strong>, les pieds presque dans le sable, Le Tam Tam
+        cultive l'art de la décontraction méditerranéenne : une salle lumineuse aux tons
+        marins, une terrasse qui s'ouvre sur la plage et une cuisine qui fait la part belle
+        aux produits de la mer et aux producteurs du Var.
+      </p>
+      <p>
+        Ici, l'ambiance est moderne et décontractée — on vient en famille après la plage,
+        entre amis pour l'apéritif au coucher du soleil, ou pour un dîner bistronomique
+        les pieds dans le sable. Service souriant, musique douce et vue imprenable sur
+        les bateaux du port.
       </p>
     </div>
-
-    <div class="grille-prestations">
-      <article class="carte reveal">
-        <div class="carte-media">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Assiette bistronomique dressée avec soin à la carte du Tam Tam" loading="lazy">
-          <span class="carte-tag">Cuisine maison</span>
-        </div>
-        <div class="carte-corps">
-          <h3>La carte maison</h3>
-          <p>
-            Une bistronomie française et méditerranéenne qui change au rythme du marché&nbsp;:
-            carpaccio de bœuf fumé, salade Tam Tam au saumon fumé, poissons et
-            saveurs méditerranéennes, préparés du matin au soir dans notre cuisine.
-          </p>
-          <span class="carte-note"><span class="pastille">&#9679;</span> Produits frais, plats faits sur place</span>
-        </div>
-      </article>
-
-      <article class="carte reveal delai-1">
-        <div class="carte-media">
-          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Terrasse ombragée du restaurant, dressée face à la mer au soleil couchant" loading="lazy">
-          <span class="carte-tag">Vue mer</span>
-        </div>
-        <div class="carte-corps">
-          <h3>Terrasse vue mer</h3>
-          <p>
-            100 couverts à l'ombre, les pieds presque dans le sable&nbsp;: notre terrasse
-            ombragée fait face à la plage du Lavandou. L'endroit rêvé pour un apéritif,
-            un déjeuner tranquille ou un dîner les pieds en éventail.
-          </p>
-          <span class="carte-note"><span class="pastille">&#9679;</span> Face à la plage, ambiance ensoleillée</span>
-        </div>
-      </article>
-
-      <article class="carte reveal delai-2">
-        <div class="carte-media">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Grande salle de restaurant pouvant accueillir des groupes" loading="lazy">
-          <span class="carte-tag">Groupes bienvenus</span>
-        </div>
-        <div class="carte-corps">
-          <h3>Groupes &amp; privatisation</h3>
-          <p>
-            Deux salles climatisées de 120 couverts au total, pour vos repas de famille,
-            anniversaires, comités d'entreprise ou tables de vacanciers entre amis.
-            Menus adaptés sur demande, il suffit de nous appeler au
-            <a href="tel:+33494220653">04 94 22 06 53</a>.
-          </p>
-          <span class="carte-note"><span class="pastille">&#9679;</span> 2 salles climatisées · Grandes tablées</span>
-        </div>
-      </article>
-
-      <article class="carte reveal delai-3">
-        <div class="carte-media">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Plat frais et coloré préparé avec des produits du marché" loading="lazy">
-          <span class="carte-tag">Produits frais</span>
-        </div>
-        <div class="carte-corps">
-          <h3>Produits frais &amp; fait maison</h3>
-          <p>
-            Ici, tout est fait maison&nbsp;: poissons, légumes méditerranéens, desserts du
-            jour. Nous sélectionnons des produits frais pour une cuisine sincère,
-            généreuse et pleine de soleil, comme on l'aime face à la mer.
-          </p>
-          <span class="carte-note"><span class="pastille">&#9679;</span> Sélection quotidienne · Saveurs du Sud</span>
-        </div>
-      </article>
-    </div>
   </div>
 </section>
-
-<section class="section apropos" id="apropos">
-  <div class="conteneur">
-    <div class="grille">
-      <div class="ap-visuel reveal">
-        <img class="ap-img-principale" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="La plage du Lavandou au soleil, face au restaurant Le Tam Tam" loading="lazy">
-        <img class="ap-img-flottante" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Poisson méditerranéen préparé maison à la carte du Tam Tam" loading="lazy">
-      </div>
-      <div class="ap-texte reveal delai-1">
-        <span class="surtitre">À propos</span>
-        <h2>Face à la plage du Lavandou</h2>
-        <p>
-          <strong>Le Tam Tam</strong>, c'est une adresse ensoleillée posée face à la plage
-          du Lavandou, dans le Var. Dès l'arrivée, le décor exotique et la lumière de la
-          Méditerranée vous accueillent&nbsp;: ici, on vient autant pour l'assiette que
-          pour le cadre.
-        </p>
-        <p>
-          En cuisine, une bistronomie française et méditerranéenne&nbsp;:
-          <strong>carpaccio de bœuf fumé</strong>, <strong>salade Tam Tam au saumon fumé</strong>,
-          poissons et saveurs du Sud — tout est préparé maison, avec des produits frais
-          choisis avec soin.
-        </p>
-        <ul class="ap-atouts">
-          <li><span class="coche">&#10003;</span> Cuisine 100&nbsp;% faite maison, produits frais</li>
-          <li><span class="coche">&#10003;</span> Terrasse ombragée vue mer — 100 couverts</li>
-          <li><span class="coche">&#10003;</span> 2 salles climatisées — 120 couverts</li>
-          <li><span class="coche">&#10003;</span> Couples, familles, touristes et groupes bienvenus</li>
-        </ul>
-        <div class="ap-infos">
-          <span class="element">
-            <span class="ico" aria-hidden="true">&#128205;</span>
-            <span>60 Av. Général Bouvet,<br>83980 Le Lavandou</span>
-          </span>
-          <span class="element">
-            <span class="ico" aria-hidden="true">&#9742;</span>
-            <a href="tel:+33494220653">04 94 22 06 53</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ==================== PARTIE 2 — Avis, Galerie, Infos pratiques, Footer (à concaténer à la fin de index.html) ==================== -->
 
 <style>
-  /* ---------- Avis (fond bleu nuit) ---------- */
-  .section-nuit{background:var(--bleu-nuit);}
-  .section-nuit .surtitre{color:var(--corail);}
+  /* Filet de sécurité partie 2 : ces classes sont normalement déjà définies dans la partie 1.
+     Si l'une manque, elle est stylée ici avec la même palette (marine #0d2438, corail #e8604c, sable #f5efe4). */
+  .section{padding:96px 0;}
+  .conteneur{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .surtitre{display:inline-block;color:var(--corail-fonce,#c94a36);font-size:13.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;}
+  .section-titre{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:700;color:var(--bleu-nuit,#0d2438);}
+  .section-intro{max-width:720px;margin:16px auto 0;color:#4a5b74;font-size:17px;}
+  .section-entete{text-align:center;margin-bottom:54px;}
+  .separateur{width:64px;height:4px;border-radius:4px;background:var(--corail,#e8604c);margin:22px auto 0;}
+  [id]{scroll-margin-top:90px;}
+  figure{margin:0;}
+
+  /* ---------- Avis (fond bleu marine) ---------- */
+  .section-nuit{background:var(--bleu-nuit,#0d2438);}
+  .section-nuit .surtitre{color:var(--corail,#e8604c);}
   .section-nuit .section-titre{color:#fff;}
-  .section-nuit .section-intro{color:#dfe7f2;}
-  .avis-mention{
-    display:inline-block;margin-top:14px;
-    font-size:14.5px;font-weight:500;color:#f6d9d3;
-    background:rgba(255,111,97,.14);border:1px solid rgba(255,111,97,.35);
-    border-radius:999px;padding:7px 16px;
-  }
-  .avis-grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
-  .avis-carte{
-    background:var(--sable);border-radius:18px;padding:30px 28px;
-    box-shadow:0 16px 38px rgba(0,0,0,.28);
-    display:flex;flex-direction:column;gap:14px;
-    transition:transform .25s ease,box-shadow .25s ease;
-  }
-  .avis-carte:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(0,0,0,.34);}
-  .etoiles{color:var(--corail);font-size:20px;letter-spacing:4px;line-height:1;}
-  .avis-texte{font-size:15.5px;color:var(--texte);line-height:1.7;}
+  .section-nuit .section-intro{color:#d9e2ef;}
+  .avis-mention{display:inline-block;margin-top:16px;font-size:13px;font-weight:500;color:#f4d7d0;background:rgba(232,96,76,.15);border:1px solid rgba(232,96,76,.4);border-radius:999px;padding:6px 14px;}
+  .avis-grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;}
+  .avis-carte{background:var(--sable,#f5efe4);color:#2b3a52;border-radius:16px;padding:28px 26px;box-shadow:0 14px 34px rgba(0,0,0,.25);display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,box-shadow .25s ease;}
+  .avis-carte:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.32);}
+  .etoiles{color:var(--corail,#e8604c);font-size:19px;letter-spacing:4px;line-height:1;}
+  .avis-texte{font-size:15.5px;line-height:1.7;}
   .avis-auteur{margin-top:auto;padding-top:6px;}
-  .avis-auteur .nom{display:block;font-size:15.5px;font-weight:700;color:var(--bleu-nuit);}
-  .avis-auteur .contexte{display:block;font-size:13.5px;color:var(--texte-doux);margin-top:2px;}
+  .avis-auteur .nom{display:block;font-size:15.5px;font-weight:700;color:var(--bleu-nuit,#0d2438);}
+  .avis-auteur .contexte{display:block;font-size:13px;color:#5b6b80;margin-top:2px;}
+
+  /* ---------- Galerie ---------- */
+  .galerie-section{background:var(--sable,#f5efe4);}
+  .galerie-grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
+  .galerie-item{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(13,36,56,.16);}
+  .galerie-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .5s ease;}
+  .galerie-item:hover img{transform:scale(1.05);}
+  .galerie-item figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.78));color:#fff;font-size:13.5px;font-weight:600;padding:28px 14px 12px;}
 
   /* ---------- Infos pratiques ---------- */
-  .infos-pratiques{background:var(--blanc);}
-  .infos-grille{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;}
+  .infos-pratiques{background:var(--blanc,#fff);}
+  .infos-grille{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
   .infos-liste{display:grid;gap:14px;}
-  .info-item{
-    display:flex;gap:14px;align-items:flex-start;
-    background:var(--sable);border:1px solid var(--ligne);border-radius:14px;
-    padding:16px 18px;
-  }
-  .info-item .ico{
-    flex:0 0 auto;width:40px;height:40px;border-radius:12px;
-    background:var(--bleu-nuit);color:var(--corail);
-    display:flex;align-items:center;justify-content:center;font-size:18px;
-  }
-  .info-item h3{font-size:17px;font-weight:700;margin-bottom:3px;}
-  .info-item p{font-size:15px;color:var(--texte-doux);line-height:1.6;}
-  .info-item a{font-weight:700;color:var(--bleu-nuit);border-bottom:2px solid var(--corail);transition:color .2s ease;}
-  .info-item a:hover{color:var(--corail-fonce);}
-
-  /* ---------- Contact ---------- */
-  .contact-section{background:var(--sable);}
-  .contact-encart{
-    background:linear-gradient(135deg,var(--bleu-nuit) 0%,var(--bleu-nuit-2) 100%);
-    border-radius:24px;padding:54px;
-    display:grid;grid-template-columns:1.05fr 1fr;gap:44px;
-    box-shadow:var(--ombre-forte);align-items:center;
-  }
-  .contact-encart h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:14px;}
-  .contact-encart .contact-texte{color:#dfe7f2;font-size:16px;max-width:460px;}
-  .contact-tel{
-    display:inline-block;margin:26px 0 22px;
-    font-family:'Playfair Display',Georgia,serif;font-weight:800;
-    font-size:clamp(28px,4.2vw,40px);color:#fff;letter-spacing:.01em;
-    border-bottom:3px solid var(--corail);padding-bottom:4px;
-    transition:color .2s ease;
-  }
-  .contact-tel:hover{color:var(--corail);}
-  .contact-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px;}
-  .contact-note{font-size:15px;color:#c9d4e4;display:flex;align-items:center;gap:8px;}
-  .contact-note .ico{color:var(--corail);font-size:17px;}
-  .contact-formulaire{
-    background:var(--sable);border-radius:18px;padding:32px 30px;
-    box-shadow:0 18px 40px rgba(0,0,0,.30);
-  }
-  .contact-formulaire h3{font-size:21px;margin-bottom:18px;}
-  .champ{margin-bottom:16px;}
-  .champ label{display:block;font-size:15px;font-weight:600;color:var(--bleu-nuit);margin-bottom:6px;}
-  .champ input,.champ textarea{
-    width:100%;font-family:'Inter',Arial,sans-serif;font-size:15.5px;color:var(--texte);
-    background:#fff;border:1px solid #d9d2c2;border-radius:10px;padding:12px 14px;
-    transition:border-color .2s ease,box-shadow .2s ease;
-  }
-  .champ input:focus,.champ textarea:focus{
-    outline:none;border-color:var(--corail);box-shadow:0 0 0 3px rgba(255,111,97,.18);
-  }
-  .champ textarea{min-height:120px;resize:vertical;}
-  .btn-envoyer{
-    width:100%;justify-content:center;border:none;cursor:pointer;
-    font-family:'Inter',Arial,sans-serif;
-  }
-  .form-note{
-    margin-top:12px;font-size:14px;color:var(--texte-doux);
-    display:flex;align-items:center;justify-content:center;gap:8px;
-  }
-  .form-note .ico{color:var(--corail);}
+  .info-item{display:flex;gap:14px;align-items:flex-start;background:var(--sable,#f5efe4);border:1px solid #e7dfcf;border-radius:14px;padding:16px 18px;}
+  .info-item .ico{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:var(--bleu-nuit,#0d2438);color:var(--corail,#e8604c);display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .info-item h3{font-size:16.5px;font-weight:700;margin:0 0 3px;color:var(--bleu-nuit,#0d2438);}
+  .info-item p{font-size:15px;color:#4a5b74;line-height:1.6;margin:0;}
+  .info-item a{font-weight:700;color:var(--bleu-nuit,#0d2438);border-bottom:2px solid var(--corail,#e8604c);}
+  .encart-appel{background:linear-gradient(135deg,var(--bleu-nuit,#0d2438),var(--bleu-nuit-2,#123252));color:#fff;border-radius:20px;padding:38px 30px;text-align:center;box-shadow:0 18px 40px rgba(13,36,56,.28);}
+  .encart-appel h3{color:#fff;font-size:24px;font-weight:700;margin:0 0 10px;}
+  .encart-appel p{color:#d9e2ef;font-size:15.5px;line-height:1.6;}
+  .contact-tel{display:inline-block;margin:18px 0 20px;font-size:30px;font-weight:700;color:#fff;border-bottom:3px solid var(--corail,#e8604c);padding-bottom:2px;transition:color .2s ease;}
+  .contact-tel:hover{color:var(--corail,#e8604c);}
+  .encart-appel .btn-corail{display:inline-flex;align-items:center;gap:10px;background:var(--corail,#e8604c);color:#fff;font-weight:700;font-size:16px;border-radius:999px;padding:13px 28px;box-shadow:0 10px 24px rgba(232,96,76,.45);transition:background .2s ease,transform .2s ease;}
+  .encart-appel .btn-corail:hover{background:var(--corail-fonce,#c94a36);transform:translateY(-2px);}
+  .appel-note{margin-top:16px;font-size:13.5px;color:#b9c6d8;}
 
   /* ---------- Footer ---------- */
-  .pied{background:var(--bleu-nuit);border-top:4px solid var(--corail);padding:54px 0 42px;text-align:center;}
-  .pied .marque-footer{
-    font-family:'Playfair Display',Georgia,serif;font-weight:800;
-    font-size:clamp(24px,3.4vw,32px);color:#fff;letter-spacing:.01em;
-  }
-  .pied .slogan-footer{
-    margin-top:8px;font-size:14.5px;letter-spacing:.08em;text-transform:uppercase;color:#8fa3c0;
-  }
-  .pied-sep{width:56px;height:3px;border-radius:3px;background:var(--corail);margin:22px auto;}
-  .pied-contact{font-size:15px;color:#c9d4e4;line-height:1.8;}
-  .pied-contact a{font-weight:700;color:#fff;border-bottom:2px solid var(--corail);padding-bottom:1px;transition:color .2s ease;}
-  .pied-contact a:hover{color:var(--corail);}
-  .pied-mentions{margin-top:20px;font-size:14px;color:#8fa3c0;line-height:1.8;}
-  .pied-copyright{margin-top:10px;font-size:14px;color:#c9d4e4;font-weight:600;}
-
+  .pied{background:var(--bleu-nuit,#0d2438);border-top:4px solid var(--corail,#e8604c);padding:52px 0 40px;text-align:center;color:#fff;}
+  .marque-footer{font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:800;margin:0;letter-spacing:.01em;}
+  .marque-footer .point{color:var(--corail,#e8604c);}
+  .slogan-footer{margin-top:8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#9db0c8;}
+  .pied-sep{width:56px;height:3px;border-radius:3px;background:var(--corail,#e8604c);margin:22px auto;}
+  .pied-contact{font-size:15px;color:#cdd8e6;line-height:1.8;}
+  .pied-contact a{font-weight:700;color:#fff;border-bottom:2px solid var(--corail,#e8604c);padding-bottom:1px;}
+  .pied-contact a:hover{color:var(--corail,#e8604c);}
+  .pied-mentions{margin-top:18px;font-size:13.5px;color:#9db0c8;}
+  .pied-copyright{margin-top:8px;font-size:14px;color:#cdd8e6;font-weight:600;}
   @media (max-width:900px){
-    .infos-grille{grid-template-columns:1fr;gap:34px;}
-    .contact-encart{grid-template-columns:1fr;padding:36px 24px;gap:30px;}
+    .section{padding:72px 0;}
+    .infos-grille{grid-template-columns:1fr;gap:30px;}
     .contact-tel{font-size:26px;}
   }
 </style>
 
 <section class="section section-nuit" id="avis">
   <div class="conteneur">
-    <div class="section-entete reveal">
+    <div class="section-entete">
       <span class="surtitre">Avis clients</span>
       <h2 class="section-titre">Ils en parlent</h2>
-      <p class="avis-mention">Exemples à remplacer par vos vrais avis Google (4,7&#9733; — plus de 2&nbsp;200 avis)</p>
       <div class="separateur" aria-hidden="true"></div>
+      <p class="section-intro">
+        Des assiettes généreuses, une équipe aux petits soins et la mer pour horizon&nbsp;:
+        ce que nos hôtes retiennent de leur passage au Tam Tam.
+      </p>
+      <p class="avis-mention">Exemples à remplacer par vos vrais avis Google (4,7&#9733; — 2&nbsp;283 avis)</p>
     </div>
 
     <div class="avis-grille">
-      <article class="avis-carte reveal">
-        <span class="etoiles" role="img" aria-label="Note&nbsp;: 5 étoiles sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <article class="avis-carte">
+        <span class="etoiles" role="img" aria-label="Note&nbsp;: 5 étoiles sur 5">★★★★★</span>
         <p class="avis-texte">
-          &laquo;&nbsp;Une adresse qu'on a faite trois fois en une semaine&nbsp;! Poissons ultra frais,
-          assiettes généreuses et cette terrasse face à la mer… on ne s'en lasse pas.
-          Accueil souriant du début à la fin.&nbsp;&raquo;
+          «&nbsp;On a déjeuné ici trois fois pendant notre semaine de vacances&nbsp;: poisson du jour
+          parfaitement cuit, assiettes généreuses et cette impression d'avoir les pieds presque dans
+          le sable. Même à midi avec la salle pleine, l'équipe reste souriante et efficace.&nbsp;»
         </p>
         <div class="avis-auteur">
-          <span class="nom">Sophie L.</span>
+          <span class="nom">Sophie M.</span>
           <span class="contexte">Vacancière — déjeuner en terrasse</span>
         </div>
       </article>
 
-      <article class="avis-carte reveal delai-1">
-        <span class="etoiles" role="img" aria-label="Note&nbsp;: 5 étoiles sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <article class="avis-carte">
+        <span class="etoiles" role="img" aria-label="Note&nbsp;: 5 étoiles sur 5">★★★★★</span>
         <p class="avis-texte">
-          &laquo;&nbsp;Nous étions douze autour de la table pour un repas de famille&nbsp;: service
-          aux petits soins, plats maison savoureux et un cadre ensoleillé. La réservation
-          de groupe s'est faite simplement par téléphone.&nbsp;&raquo;
+          «&nbsp;Réservation facile par téléphone, table face à la mer pour le coucher de soleil.
+          Cuisine bistronomique vraiment créative, produits ultra frais et cocktails maison
+          excellents. Le genre d'adresse qu'on note précieusement pour y revenir l'année prochaine.&nbsp;»
         </p>
         <div class="avis-auteur">
-          <span class="nom">Marc D.</span>
-          <span class="contexte">Repas de famille — groupe de 12 personnes</span>
+          <span class="nom">Laurent B.</span>
+          <span class="contexte">Dîner en couple au coucher du soleil</span>
         </div>
       </article>
 
-      <article class="avis-carte reveal delai-2">
-        <span class="etoiles" role="img" aria-label="Note&nbsp;: 5 étoiles sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <article class="avis-carte">
+        <span class="etoiles" role="img" aria-label="Note&nbsp;: 5 étoiles sur 5">★★★★★</span>
         <p class="avis-texte">
-          &laquo;&nbsp;Le carpaccio de bœuf fumé et la salade Tam Tam valent vraiment le détour,
-          et le coucher de soleil depuis la terrasse fait le reste. Une belle adresse
-          bistronomique, les pieds presque dans le sable.&nbsp;&raquo;
+          «&nbsp;Un vrai bon moment en famille après la plage&nbsp;: les enfants ont été chouchoutés,
+          les assiettes sont belles et goûteuses, et la terrasse ombragée est un vrai plus par
+          grosse chaleur. Prix tout à fait raisonnables pour cette qualité.&nbsp;»
         </p>
         <div class="avis-auteur">
-          <span class="nom">Claire &amp; Julien</span>
-          <span class="contexte">Dîner face à la plage</span>
+          <span class="nom">La famille Roussel</span>
+          <span class="contexte">Déjeuner après la plage — 2 adultes, 3 enfants</span>
         </div>
       </article>
+
+      <article class="avis-carte">
+        <span class="etoiles" role="img" aria-label="Note&nbsp;: 5 étoiles sur 5">★★★★★</span>
+        <p class="avis-texte">
+          «&nbsp;Nous étions dix autour de la grande table pour un anniversaire&nbsp;: service impeccable
+          malgré la maison comble, entrées comme desserts à tomber, et le patron nous a même
+          réservé une surprise pour l'heure du gâteau. Merci pour cette soirée&nbsp;!&nbsp;»
+        </p>
+        <div class="avis-auteur">
+          <span class="nom">Isabelle &amp; Pascal</span>
+          <span class="contexte">Anniversaire — groupe de 10 personnes</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section galerie-section" id="galerie">
+  <div class="conteneur">
+    <div class="section-entete">
+      <span class="surtitre">En images</span>
+      <h2 class="section-titre">Galerie</h2>
+      <div class="separateur" aria-hidden="true"></div>
+      <p class="section-intro">
+        Un aperçu de l'assiette, des cocktails et du cadre, entre le port et la plage du Lavandou.
+      </p>
+    </div>
+
+    <div class="galerie-grille">
+      <figure class="galerie-item">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Assiette bistronomique dressée avec soin, produits frais du jour" loading="lazy">
+        <figcaption>Assiette bistronomique — produits frais du jour</figcaption>
+      </figure>
+
+      <figure class="galerie-item">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Cocktails maison servis en terrasse face à la mer" loading="lazy">
+        <figcaption>Cocktails maison en terrasse</figcaption>
+      </figure>
+
+      <figure class="galerie-item">
+        <img src="https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Coucher de soleil sur la mer méditerranée au Lavandou" loading="lazy">
+        <figcaption>Coucher de soleil sur la mer</figcaption>
+      </figure>
+
+      <figure class="galerie-item">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="La salle du restaurant, tables dressées dans une ambiance moderne et décontractée" loading="lazy">
+        <figcaption>La salle — ambiance moderne et décontractée</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <section class="section infos-pratiques" id="infos">
   <div class="conteneur">
-    <div class="section-entete reveal">
+    <div class="section-entete">
       <span class="surtitre">Nous trouver</span>
       <h2 class="section-titre">Infos pratiques</h2>
       <div class="separateur" aria-hidden="true"></div>
       <p class="section-intro">
-        En bord de mer, face à la plage du Lavandou&nbsp;: tout ce qu'il faut savoir pour
-        préparer votre venue.
+        En bord de mer, face au port du Lavandou&nbsp;: tout ce qu'il faut savoir pour préparer
+        votre venue.
       </p>
     </div>
 
     <div class="infos-grille">
-      <div class="ap-visuel reveal">
-        <img class="ap-img-principale" src="https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="La plage et la mer turquoise au Lavandou, face au restaurant Le Tam Tam" loading="lazy">
-        <img class="ap-img-flottante" src="https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Coucher de soleil sur la mer, vu depuis le bord de plage du Lavandou" loading="lazy">
-        <p class="ap-legende"><span class="pastille">&#9679;</span> Le restaurant est situé en bord de mer, face à la plage du Lavandou.</p>
-      </div>
-
-      <div class="infos-liste reveal delai-1">
+      <div class="infos-liste">
         <div class="info-item">
-          <span class="ico" aria-hidden="true">&#128205;</span>
+          <span class="ico" aria-hidden="true">📍</span>
           <div>
             <h3>Adresse</h3>
-            <p>60 Av. Général Bouvet, 83980 Le Lavandou</p>
+            <p>Face au port du Lavandou, 83980 Le Lavandou (Var)</p>
           </div>
         </div>
         <div class="info-item">
-          <span class="ico" aria-hidden="true">&#9742;</span>
+          <span class="ico" aria-hidden="true">☎️</span>
           <div>
             <h3>Téléphone</h3>
             <p><a href="tel:+33494220653">04 94 22 06 53</a></p>
           </div>
         </div>
         <div class="info-item">
-          <span class="ico" aria-hidden="true">&#128337;</span>
+          <span class="ico" aria-hidden="true">🕐</span>
           <div>
-            <h3>Horaires &amp; réservations</h3>
-            <p>Horaires et réservations&nbsp;: par téléphone.</p>
+            <h3>Horaires</h3>
+            <p>Ouvert midi et soir en saison — appelez pour les horaires exacts.</p>
           </div>
         </div>
         <div class="info-item">
-          <span class="ico" aria-hidden="true">&#9728;</span>
-          <div>
-            <h3>Terrasse vue mer</h3>
-            <p>Terrasse ombragée face à la mer — 100&nbsp;couverts pour déjeuner et dîner les pieds en éventail.</p>
-          </div>
-        </div>
-        <div class="info-item">
-          <span class="ico" aria-hidden="true">&#128101;</span>
+          <span class="ico" aria-hidden="true">👥</span>
           <div>
             <h3>Groupes bienvenus</h3>
-            <p>Plus de 8&nbsp;couverts&nbsp;? Il s'agit d'une réservation de groupe&nbsp;: appelez-nous directement, nous organisons votre tablée dans nos 2&nbsp;salles climatisées.</p>
+            <p>Grande tablée en vue&nbsp;? Appelez-nous directement, nous organisons votre repas
+            dans la salle ou en terrasse.</p>
           </div>
         </div>
         <div class="info-item">
-          <span class="ico" aria-hidden="true">&#128663;</span>
+          <span class="ico" aria-hidden="true">🚗</span>
           <div>
-            <h3>Parking à proximité</h3>
-            <p>Un parking se trouve à proximité du restaurant, pour arriver détendu et profiter de la plage.</p>
+            <h3>Accès</h3>
+            <p>Parking à proximité du port, à deux pas de la plage&nbsp;: arrivez détendu, la mer
+            fait le reste.</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<section class="section contact-section" id="contact">
-  <div class="conteneur">
-    <div class="contact-encart reveal">
-      <div class="contact-gauche">
-        <span class="surtitre">Contact</span>
-        <h2>Réservez votre table en un appel</h2>
-        <p class="contact-texte">
-          Une question, une envie de réserver ou d'organiser un repas de groupe&nbsp;?
-          Le plus simple est de nous appeler directement&nbsp;: nous vous répondons
-          en personne, face à la mer.
-        </p>
+      <div class="encart-appel" id="contact">
+        <h3>Réservez votre table</h3>
+        <p>Un appel suffit&nbsp;: nous vous confirmons votre table face à la mer en quelques
+        secondes, midi ou soir.</p>
         <a class="contact-tel" href="tel:+33494220653">04 94 22 06 53</a>
-        <div class="contact-actions">
-          <a class="btn btn-corail" href="tel:+33494220653">&#9742;&nbsp; Appelez-nous</a>
-          <span class="contact-note"><span class="ico" aria-hidden="true">&#9742;</span> Réponse rapide par téléphone</span>
+        <div>
+          <a class="btn btn-corail encart-btn" href="tel:+33494220653">☎️&nbsp; Appelez le Tam Tam</a>
         </div>
-      </div>
-
-      <div class="contact-formulaire">
-        <h3>Envoyer une demande</h3>
-        <form onsubmit="return false;">
-          <div class="champ">
-            <label for="f-nom">Nom</label>
-            <input type="text" id="f-nom" name="nom" autocomplete="name" placeholder="Votre nom">
-          </div>
-          <div class="champ">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" autocomplete="email" placeholder="votre@email.fr">
-          </div>
-          <div class="champ">
-            <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" placeholder="Votre demande (date, nombre de personnes…)"></textarea>
-          </div>
-          <button type="submit" class="btn btn-corail btn-envoyer">Envoyer une demande</button>
-          <p class="form-note"><span class="ico" aria-hidden="true">&#9742;</span> Réponse rapide par téléphone</p>
-        </form>
+        <p class="appel-note">Ouvert midi et soir en saison — appelez pour les horaires exacts.</p>
       </div>
     </div>
   </div>
@@ -748,11 +708,11 @@
 
 <footer class="pied">
   <div class="conteneur">
-    <p class="marque-footer">Le Tam Tam — Le Lavandou</p>
-    <p class="slogan-footer">Restaurant bistronomique · Cuisine française &amp; méditerranéenne · Fait maison</p>
+    <p class="marque-footer">Le Tam Tam<span class="point">.</span></p>
+    <p class="slogan-footer">Bistronomie créative face à la mer · Le Lavandou</p>
     <div class="pied-sep" aria-hidden="true"></div>
     <p class="pied-contact">
-      60 Av. Général Bouvet, 83980 Le Lavandou<br>
+      Face au port du Lavandou, 83980 Le Lavandou (Var)<br>
       <a href="tel:+33494220653">04 94 22 06 53</a>
     </p>
     <p class="pied-mentions">Maquette d'idée — photos d'illustration libres de droits</p>
@@ -760,41 +720,5 @@
   </div>
 </footer>
 
-<script>
-(function(){
-  document.documentElement.classList.add('js');
-  var burger=document.getElementById('burger');
-  var liens=document.getElementById('nav-liens');
-  if(burger&&liens){
-    burger.addEventListener('click',function(){
-      var ouvert=liens.classList.toggle('open');
-      burger.setAttribute('aria-expanded',ouvert?'true':'false');
-      burger.setAttribute('aria-label',ouvert?'Fermer le menu':'Ouvrir le menu');
-    });
-    liens.addEventListener('click',function(e){
-      if(e.target&&e.target.tagName==='A'){
-        liens.classList.remove('open');
-        burger.setAttribute('aria-expanded','false');
-      }
-    });
-  }
-  var nav=document.getElementById('nav-principal');
-  if(nav){
-    var maj=function(){nav.classList.toggle('scrolled',(window.scrollY||0)>10);};
-    window.addEventListener('scroll',maj,{passive:true});
-    maj();
-  }
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entrees){
-      entrees.forEach(function(en){
-        if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}
-      });
-    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  }else{
-    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
-  }
-})();
-</script>
 </body>
 </html>
